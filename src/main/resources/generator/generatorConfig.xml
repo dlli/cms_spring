@@ -7,13 +7,13 @@
                      <property name="suppressAllComments" value="true"/>
               </commentGenerator>
               <!--数据库链接地址账号密码-->
-              <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/tmwk" userId="root" password="123456">
+              <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/cms" userId="root" password="123456">
               </jdbcConnection>
               <javaTypeResolver>
                      <property name="forceBigDecimals" value="false"/>
               </javaTypeResolver>
               <!--生成Model类存放位置-->
-              <javaModelGenerator targetPackage="com.yc.tmwk.model" targetProject="src/main/java">
+              <javaModelGenerator targetPackage="com.dl.cms.base.model" targetProject="src/main/java">
                      <property name="enableSubPackages" value="true"/>
                      <property name="trimStrings" value="true"/>
               </javaModelGenerator>
@@ -27,18 +27,11 @@
                       type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
                       type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
               -->
-              <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.yc.tmwk.dao" targetProject="src/main/java">
+              <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.dl.cms.base.dao" targetProject="src/main/java">
                      <property name="enableSubPackages" value="true"/>
               </javaClientGenerator>
-              <table tableName="attachment" domainObjectName="Attachment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-              <table tableName="chat" domainObjectName="Chat" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-              <table tableName="comments" domainObjectName="Comments" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-              <table tableName="role" domainObjectName="Role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-              <table tableName="tag" domainObjectName="Tag" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-              <table tableName="task" domainObjectName="Task" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-              <table tableName="task_record" domainObjectName="TaskRecord" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-              <table tableName="task_tag" domainObjectName="TaskTag" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
               <table tableName="users" domainObjectName="Users" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-              <table tableName="user_role" domainObjectName="UserRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
        </context>
 </generatorConfiguration>
